@@ -114,7 +114,7 @@ export const invitation = {
       inviteText: "Join us to celebrate the union of",
       brideParents: "Daughter of Sureshbhai and Urmilaben Bhakta",
       groomParents: "Son of Hiro and Poonam Shahani",
-      description: "The celebratory Barat followed by the sacred Hastamelap and Saptapadi around the holy fire, uniting Punam and Jagdish in eternal matrimony.",
+      description: "A celebratory Barat followed by the sacred Varmala (garland exchange), an intimate blessing ceremony, and heartfelt exchange of wedding vows uniting Punam and Jagdish in eternal love.",
       image: "/images/ceremony-wedding.png",
     },
     {
