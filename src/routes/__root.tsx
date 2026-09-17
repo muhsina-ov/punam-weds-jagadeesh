@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { invitation } from "@/content/invitation";
 
 function NotFoundComponent() {
   return (
@@ -76,18 +77,40 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Punam & Jagdish — Wedding Invitation" },
-      {
-        name: "description",
-        content:
-          "Wedding celebration for Punam Bhakta & Jagdish Shahani on December 22 & 23, 2026 at Humble Civic Center, Texas.",
-      },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { title: invitation.meta.title },
+      { name: "description", content: invitation.meta.description },
       { name: "theme-color", content: "#fdf8ef" },
+
+      // Open Graph / WhatsApp / Facebook
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: invitation.meta.siteName },
+      { property: "og:url", content: invitation.meta.url },
+      { property: "og:title", content: invitation.meta.title },
+      { property: "og:description", content: invitation.meta.description },
+      { property: "og:image", content: invitation.meta.ogImage },
+      { property: "og:image:secure_url", content: invitation.meta.ogImage },
+      { property: "og:image:type", content: invitation.meta.imageType },
+      { property: "og:image:width", content: String(invitation.meta.imageWidth) },
+      { property: "og:image:height", content: String(invitation.meta.imageHeight) },
+      { property: "og:image:alt", content: invitation.meta.imageAlt },
+
+      // Twitter / X
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:url", content: invitation.meta.url },
+      { name: "twitter:title", content: invitation.meta.title },
+      { name: "twitter:description", content: invitation.meta.description },
+      { name: "twitter:image", content: invitation.meta.ogImage },
+      { name: "twitter:image:alt", content: invitation.meta.imageAlt },
+
+      // Schema.org / Search Engine Fallbacks
+      { itemProp: "name", content: invitation.meta.title },
+      { itemProp: "description", content: invitation.meta.description },
+      { itemProp: "image", content: invitation.meta.ogImage },
     ],
     links: [
+      { rel: "canonical", href: invitation.meta.url },
+      { rel: "image_src", href: invitation.meta.ogImage },
       {
         rel: "stylesheet",
         href: appCss,
@@ -99,6 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@300;400;600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: "/og-image.jpg" },
     ],
   }),
 

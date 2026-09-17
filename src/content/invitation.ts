@@ -58,6 +58,19 @@ export const invitation = {
 
   dressCode: "Traditional Indian & Festive Formal Attire",
 
+  meta: {
+    title: "Punam & Jagdish — Wedding Celebration Invitation",
+    siteName: "Punam & Jagdish Wedding Celebration",
+    description:
+      "We joyfully invite you to celebrate the wedding of Punam Bhakta & Jagdish Shahani on December 22nd & 23rd, 2026 at Humble Civic Center, Texas. Join us for the Pithi, Barat, Wedding Ceremony & Reception.",
+    url: "https://punam-weds-jagadeesh.invitingyou.top/",
+    ogImage: "https://punam-weds-jagadeesh.invitingyou.top/og-image.jpg",
+    imageWidth: 1200,
+    imageHeight: 630,
+    imageType: "image/jpeg",
+    imageAlt: "Punam & Jagdish Royal Wedding Celebration Invitation",
+  },
+
   hero: {
     sacredInvocation: "SHREE RAMKABIR SATYA CHHHE",
     kicker: "Together with their families",
