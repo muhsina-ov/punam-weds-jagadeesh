@@ -29,35 +29,28 @@ export function CoupleStory() {
             transition={{ type: "spring", stiffness: 180, damping: 20 }}
             className="plate paper-grain mx-auto max-w-3xl overflow-hidden rounded-[2.5rem] p-4 sm:p-7 border-2 border-gold/45 shadow-2xl"
           >
-            <div className="relative overflow-hidden rounded-[2rem] border border-gold/30">
+            <div className="relative overflow-hidden rounded-[2rem] border border-gold/30 shadow-inner">
               <motion.img
                 src={couplePortrait}
                 alt="Portrait of Punam Bhakta and Jagdish Shahani"
                 loading="lazy"
-                width={1024}
-                height={1024}
-                className="aspect-square sm:aspect-[4/3] w-full object-cover object-center"
-                initial={{ scale: 1.04 }}
+                width={720}
+                height={550}
+                className="aspect-[4/3] w-full object-cover object-center"
+                initial={{ scale: 1.03 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
               />
-              <div
-                aria-hidden
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(180deg, transparent 65%, color-mix(in oklab, var(--primary) 70%, transparent) 100%)",
-                }}
-              />
-              <div className="absolute bottom-4 left-6 right-6 text-center text-primary-foreground sm:bottom-6">
-                <p className="font-sans text-[0.68rem] tracking-[0.35em] text-sandstone uppercase font-medium">
-                  Together In Love &amp; Devotion
-                </p>
-                <h3 className="mt-1 font-display text-2xl sm:text-3xl text-white drop-shadow-md">
-                  Punam &amp; Jagdish
-                </h3>
-              </div>
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="font-sans text-[0.68rem] tracking-[0.35em] text-gold-deep uppercase font-semibold">
+                Together In Love &amp; Devotion
+              </p>
+              <h3 className="mt-1 font-display text-2xl sm:text-3xl text-primary">
+                Punam &amp; Jagdish
+              </h3>
             </div>
 
             {/* Couple Introductions */}
