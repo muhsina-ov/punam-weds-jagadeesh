@@ -59,7 +59,7 @@ export const invitation = {
   dressCode: "Traditional Indian & Festive Formal Attire",
 
   meta: {
-    title: "Punam & Jagdish — Wedding Celebration Invitation",
+    title: "Punam & Jagdish | Wedding Celebration Invitation",
     siteName: "Punam & Jagdish Wedding Celebration",
     description:
       "We joyfully invite you to celebrate the wedding of Punam Bhakta & Jagdish Shahani on December 22nd & 23rd, 2026 at Humble Civic Center, Texas. Join us for the Pithi, Barat, Wedding Ceremony & Reception.",
