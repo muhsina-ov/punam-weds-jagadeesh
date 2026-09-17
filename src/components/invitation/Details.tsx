@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { CalendarPlus, Clock, MapPin, Building2, Hotel, CheckCircle, Copy, ExternalLink, CalendarCheck } from "lucide-react";
+import { CalendarPlus, MapPin, Building2, Hotel, CheckCircle, Copy, ExternalLink, CalendarCheck } from "lucide-react";
 import { invitation } from "@/content/invitation";
 import { Ornament, Reveal, SectionTitle } from "./Reveal";
 
@@ -89,11 +89,6 @@ export function Details() {
                 <p className="mt-2 text-sm font-sans leading-relaxed text-foreground/85">
                   {invitation.venue.address}
                 </p>
-
-                <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-sandstone/15 px-3 py-1.5 font-sans text-xs text-primary/80">
-                  <Clock size={13} className="text-gold-deep" />
-                  <span>{invitation.timeLabel}</span>
-                </div>
               </div>
 
               <div className="mt-6 pt-5 border-t border-gold/20 flex flex-wrap gap-2">

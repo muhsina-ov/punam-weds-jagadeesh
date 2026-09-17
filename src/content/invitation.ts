@@ -19,6 +19,7 @@ export interface EventItem {
   groomParents?: string;
   note?: string;
   image?: string;
+  imagePosition?: string;
 }
 
 export interface FamilyBranch {
@@ -128,6 +129,7 @@ export const invitation = {
       inviteText: "Join us as we toast, feast, and dance the night away in celebration of the newlyweds!",
       description: "An enchanting evening featuring cocktail hour, grand dinner banquet, heartfelt toasts, performances, and dancing until late.",
       image: "/images/ceremony-reception.png",
+      imagePosition: "object-center",
     },
   ],
 

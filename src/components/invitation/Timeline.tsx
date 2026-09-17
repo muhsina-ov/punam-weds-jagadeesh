@@ -152,7 +152,7 @@ export function Timeline() {
                           src={evt.image}
                           alt={evt.name}
                           loading="lazy"
-                          className="aspect-[16/10] sm:aspect-[16/9] w-full object-cover object-top"
+                          className={`aspect-[16/10] sm:aspect-[16/9] w-full object-cover ${evt.imagePosition ?? "object-top"}`}
                         />
                       </div>
                     )}
