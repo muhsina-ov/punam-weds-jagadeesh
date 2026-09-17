@@ -139,12 +139,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 22, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.5, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 text-5xl leading-[0.95] text-primary drop-shadow-[0_2px_18px_rgba(255,255,255,0.55)] sm:text-6xl md:text-7xl"
+          className="mt-6 flex flex-col items-center leading-[1.04] text-primary drop-shadow-[0_2px_18px_rgba(255,255,255,0.55)]"
         >
-          {invitation.couple.bride}
-          <span className="mx-3 font-script text-3xl italic sm:text-4xl">&amp;</span>
-          <br className="sm:hidden" />
-          {invitation.couple.groom}
+          <span className="block font-display text-5xl tracking-normal sm:text-6xl md:text-7xl">
+            Punam
+          </span>
+          <span className="mt-0.5 block font-display text-5xl tracking-normal sm:text-6xl md:text-7xl">
+            Bhakta <span className="align-middle font-script text-3xl italic sm:text-4xl">&amp;</span>
+          </span>
+          <span className="mt-1 block font-display text-4xl tracking-normal sm:text-5xl md:text-6xl">
+            Jagdish Shahani
+          </span>
         </motion.h1>
 
         <motion.div

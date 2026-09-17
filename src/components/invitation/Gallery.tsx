@@ -1,18 +1,42 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
-const dancing = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-dancing.jpg";
-const walking = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-walking.jpg";
-const balcony = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-balcony.jpg";
-const hands = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-hands.jpg";
-const couple = "https://media.invitestory.in/ever-after-bloom/src/assets/couple-lanterns.png";
+const couplePortrait = "/images/couple-portrait.jpg";
+const pithiImg = "/images/ceremony-pithi.png";
+const weddingImg = "/images/ceremony-wedding.png";
+const receptionImg = "/images/ceremony-reception.png";
+const coupleLanterns = "https://media.invitestory.in/ever-after-bloom/src/assets/couple-lanterns.png";
 import { Ornament, Reveal, SectionTitle } from "./Reveal";
 
 const plates = [
-  { src: walking, alt: "The couple walking hand in hand through a palace garden", span: "sm:row-span-2", ratio: "aspect-[4/5]" },
-  { src: dancing, alt: "The couple dancing under strings of warm lights", span: "", ratio: "aspect-square" },
-  { src: hands, alt: "Two joined hands, one painted with henna", span: "", ratio: "aspect-square" },
-  { src: balcony, alt: "The couple seated on a marble balcony at golden hour", span: "sm:col-span-2", ratio: "aspect-[16/10]" },
+  {
+    src: couplePortrait,
+    alt: "Punam & Jagdish in royal wedding portrait",
+    title: "Punam & Jagdish",
+    span: "sm:col-span-2",
+    ratio: "aspect-[16/11]",
+  },
+  {
+    src: pithiImg,
+    alt: "Punam at the joyful Pithi ceremony",
+    title: "Pithi Celebration",
+    span: "",
+    ratio: "aspect-[4/5]",
+  },
+  {
+    src: weddingImg,
+    alt: "Punam & Jagdish at the sacred wedding ceremony",
+    title: "The Sacred Union",
+    span: "",
+    ratio: "aspect-[4/5]",
+  },
+  {
+    src: receptionImg,
+    alt: "Punam & Jagdish toasting with guests at the reception",
+    title: "Grand Reception",
+    span: "sm:col-span-2",
+    ratio: "aspect-[16/10]",
+  },
 ];
 
 export function Gallery() {
@@ -71,7 +95,7 @@ export function Gallery() {
 
         <Reveal delay={0.1} className="mt-12 flex justify-center">
           <motion.img
-            src={couple}
+            src={coupleLanterns}
             alt="Illustration of the bride and groom looking up at rising lanterns"
             loading="lazy"
             width={556}

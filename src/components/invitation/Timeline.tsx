@@ -73,14 +73,14 @@ export function Timeline() {
             ))}
           </svg>
 
-          <ol className="space-y-10">
+          <ol className="space-y-12">
             {invitation.events.map((evt, i) => (
               <li key={evt.no}>
                 <Reveal delay={i * 0.08}>
                   <motion.div
-                    whileHover={{ x: 5 }}
+                    whileHover={{ x: 4 }}
                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    className="plate paper-grain relative rounded-[1.8rem] p-6 sm:p-8 border border-gold/40 shadow-lg"
+                    className="plate paper-grain relative rounded-[2rem] p-6 sm:p-9 border border-gold/45 shadow-xl"
                   >
                     {/* Badge number */}
                     <span
@@ -90,6 +90,7 @@ export function Timeline() {
                       {evt.no}
                     </span>
 
+                    {/* Top Metadata Row */}
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <span className="font-sans text-[0.62rem] font-semibold tracking-[0.3em] uppercase text-gold-deep">
                         {evt.date}
@@ -100,23 +101,65 @@ export function Timeline() {
                       </span>
                     </div>
 
-                    <h3 className="mt-3 text-2xl font-display text-primary sm:text-3xl">
-                      {evt.name}
-                    </h3>
+                    {/* Event Name & Poetic Tagline */}
+                    <div className="mt-4">
+                      <h3 className="text-2xl font-display text-primary sm:text-3xl">
+                        {evt.name}
+                      </h3>
+                      {evt.tagline && (
+                        <p className="mt-1 font-script text-2xl sm:text-3xl italic text-gold-deep">
+                          {evt.tagline}
+                        </p>
+                      )}
+                    </div>
 
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-sans">
+                    {/* Invitation Text / Banner */}
+                    {evt.inviteText && (
+                      <p className="mt-3 font-sans text-xs tracking-wider uppercase text-primary/75 font-medium">
+                        {evt.inviteText}
+                      </p>
+                    )}
+
+                    {/* Hosts for Pithi */}
+                    {evt.host && (
+                      <div className="mt-4 rounded-xl border border-gold/20 bg-ivory/60 p-4 text-xs font-sans text-primary leading-relaxed">
+                        <p className="font-medium">{evt.host}</p>
+                      </div>
+                    )}
+
+                    {/* Lineage for Wedding Day */}
+                    {evt.brideParents && evt.groomParents && (
+                      <div className="mt-4 rounded-xl border border-gold/20 bg-ivory/60 p-4 text-center">
+                        <p className="font-display text-lg text-primary">PUNAM</p>
+                        <p className="text-xs font-sans text-muted-foreground">{evt.brideParents}</p>
+                        <p className="my-1 font-script text-lg italic text-gold-deep">weds</p>
+                        <p className="font-display text-lg text-primary">JAGDISH</p>
+                        <p className="text-xs font-sans text-muted-foreground">{evt.groomParents}</p>
+                      </div>
+                    )}
+
+                    {/* Timing note if reception */}
+                    {evt.note && (
+                      <div className="mt-3 inline-block rounded-full bg-sandstone/15 px-3 py-0.5 font-sans text-xs text-gold-deep font-medium">
+                        {evt.note}
+                      </div>
+                    )}
+
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground font-sans">
                       {evt.description}
                     </p>
 
-                    <div className="mt-5 pt-4 border-t border-gold/20 flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
+                    {/* Bottom Venue & Attire Row */}
+                    <div className="mt-6 pt-5 border-t border-gold/20 flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
                       <div className="flex items-center gap-1.5 text-foreground/80">
                         <MapPin size={13} className="text-gold-deep shrink-0" />
                         <span>{evt.venueName}</span>
                       </div>
+
                       {evt.dressCode && (
-                        <div className="flex items-center gap-1.5 text-muted-foreground italic">
+                        <div className="flex items-center gap-1.5 rounded-full bg-sandstone/15 px-3 py-1 text-primary font-medium">
                           <Sparkles size={12} className="text-gold-deep shrink-0" />
-                          <span>{evt.dressCode}</span>
+                          <span>Attire: {evt.dressCode}</span>
                         </div>
                       )}
                     </div>

@@ -148,12 +148,20 @@ export function Details() {
 
               <div className="mt-6 pt-5 border-t border-gold/20 flex flex-wrap gap-2">
                 <a
+                  href={invitation.hotel.bookingUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 font-sans text-[0.68rem] tracking-wider text-primary-foreground uppercase hover:bg-primary/90 transition-colors shadow-sm"
+                >
+                  <Hotel size={13} /> Book Hotel Room
+                </a>
+                <a
                   href={hotelMaps}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 font-sans text-[0.68rem] tracking-wider text-primary-foreground uppercase hover:bg-primary/90 transition-colors"
+                  className="glass-plate inline-flex items-center gap-1.5 rounded-full px-4 py-2 font-sans text-[0.68rem] tracking-wider text-primary uppercase transition-colors hover:bg-cream"
                 >
-                  <ExternalLink size={13} /> View Hotel Map
+                  <ExternalLink size={13} /> View Map
                 </a>
                 <button
                   type="button"
@@ -185,11 +193,22 @@ export function Details() {
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <motion.a
+                href={invitation.rsvp.url}
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 font-sans text-[0.72rem] tracking-[0.24em] text-primary-foreground uppercase shadow-lg hover:bg-primary/90 transition-colors"
+              >
+                <ExternalLink size={15} strokeWidth={1.8} /> RSVP on The Knot
+              </motion.a>
+
+              <motion.a
                 href={buildIcs()}
                 download="Punam-Jagdish-Wedding.ics"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-sans text-[0.7rem] tracking-[0.24em] text-primary-foreground uppercase shadow-md"
+                className="glass-plate inline-flex items-center gap-2 rounded-full px-7 py-3 font-sans text-[0.7rem] tracking-[0.24em] text-primary uppercase hover:bg-cream"
               >
                 <CalendarPlus size={15} strokeWidth={1.6} /> Add to Calendar
               </motion.a>
@@ -200,7 +219,7 @@ export function Details() {
                 whileTap={{ scale: 0.97 }}
                 className="glass-plate inline-flex items-center gap-2 rounded-full px-7 py-3 font-sans text-[0.7rem] tracking-[0.24em] text-primary uppercase hover:bg-cream"
               >
-                <CalendarCheck size={15} strokeWidth={1.6} /> View Full Schedule
+                <CalendarCheck size={15} strokeWidth={1.6} /> View Schedule
               </motion.a>
             </div>
           </div>

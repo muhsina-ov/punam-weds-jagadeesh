@@ -6,12 +6,19 @@
 export interface EventItem {
   no: string;
   name: string;
+  tagline?: string;
   date: string;
   time: string;
   venueName: string;
   address: string;
   description: string;
   dressCode?: string;
+  inviteText?: string;
+  host?: string;
+  brideParents?: string;
+  groomParents?: string;
+  note?: string;
+  image?: string;
 }
 
 export interface FamilyBranch {
@@ -46,6 +53,7 @@ export const invitation = {
     name: "Sheraton IAH Houston",
     address: "15700 John F Kennedy Blvd, Houston, TX 77032",
     mapsQuery: "Sheraton Houston George Bush Intercontinental Airport, 15700 John F Kennedy Blvd, Houston, TX 77032",
+    bookingUrl: "https://app.marriott.com/resview2?id=1787857084254&key=GRP&app=resvlink",
     note: "Special accommodation arranged for wedding guests near George Bush Intercontinental Airport.",
   },
 
@@ -53,16 +61,17 @@ export const invitation = {
     deadline: "October 15th, 2026",
     deadlineISO: "2026-10-15",
     callout: "Kindly RSVP by October 15th, 2026",
+    url: "https://www.theknot.com/punamjagdish",
     note: "We look forward to celebrating this sacred union with our beloved family and friends.",
   },
 
-  dressCode: "Traditional Indian & Festive Formal Attire",
+  dressCode: "Gujarati Prints (Bandhej, Patola, Ajrak)",
 
   meta: {
     title: "Punam & Jagdish | Wedding Celebration Invitation",
     siteName: "Punam & Jagdish Wedding Celebration",
     description:
-      "We joyfully invite you to celebrate the wedding of Punam Bhakta & Jagdish Shahani on December 22nd & 23rd, 2026 at Humble Civic Center, Texas. Join us for the Pithi, Barat, Wedding Ceremony & Reception.",
+      "We joyfully invite you to celebrate the wedding of Punam Bhakta & Jagdish Shahani on December 22nd & 23rd, 2026 at Humble Civic Center, Texas. Join us for the Pithi, Wedding Ceremony & Reception.",
     url: "https://punam-weds-jagadeesh.invitingyou.top/",
     ogImage: "https://punam-weds-jagadeesh.invitingyou.top/og-image.jpg",
     imageWidth: 1200,
@@ -82,54 +91,45 @@ export const invitation = {
     {
       no: "01",
       name: "Pithi Ceremony",
-      date: "Tuesday, 22 December 2026",
+      tagline: "The Golden Glow of Love",
+      date: "Tuesday, December 22nd, 2026",
       time: "4:00 PM",
       venueName: "Humble Civic Center",
       address: "8233 Will Clayton Parkway, Humble, TX 77338",
+      inviteText: "Join us for the golden glow of love and family traditions.",
+      host: "Sureshbhai and Urmilaben Bhakta, with full hearts, joyfully invite you to their daughter Punam's Pithi Ceremony",
       description: "A joyful celebration of haldi, turmeric, music, and golden blessings as Punam and Jagdish prepare for their sacred union.",
-      dressCode: "Yellow, Mustard & Vibrant Ethnic Attire",
+      dressCode: "Gujarati Prints (Bandhej, Patola, Ajrak)",
+      note: "Dinner to follow",
+      image: "/images/ceremony-pithi.png",
     },
     {
       no: "02",
-      name: "The Barat",
-      date: "Wednesday, 23 December 2026",
-      time: "4:00 PM",
+      name: "Wedding Day",
+      tagline: "The Sacred Union",
+      date: "Wednesday, December 23rd, 2026",
+      time: "Barat 4:00 PM · Ceremony 5:00 PM",
       venueName: "Humble Civic Center",
       address: "8233 Will Clayton Parkway, Humble, TX 77338",
-      description: "The groom's celebratory royal arrival procession with energetic dhol beats, music, and festive dancing.",
-      dressCode: "Traditional Festive Splendor",
+      inviteText: "Join us to celebrate the union of",
+      brideParents: "Daughter of Sureshbhai and Urmilaben Bhakta",
+      groomParents: "Son of Hiro and Poonam Shahani",
+      description: "The celebratory Barat followed by the sacred Hastamelap and Saptapadi around the holy fire, uniting Punam and Jagdish in eternal matrimony.",
+      image: "/images/ceremony-wedding.png",
     },
     {
       no: "03",
-      name: "Wedding Ceremony",
-      date: "Wednesday, 23 December 2026",
-      time: "5:00 PM",
+      name: "Reception",
+      tagline: "Let's Get the Party Started",
+      date: "Wednesday, December 23rd, 2026",
+      time: "Cocktail Hour / Dinner 6:30 PM – 8:30 PM · Reception 9:00 PM – 1:00 AM",
       venueName: "Humble Civic Center",
       address: "8233 Will Clayton Parkway, Humble, TX 77338",
-      description: "The sacred Hastamelap and Saptapadi around the holy fire, uniting Punam and Jagdish in eternal matrimony.",
-      dressCode: "Traditional Royal Wedding Attire",
+      inviteText: "Join us as we toast, feast, and dance the night away in celebration of the newlyweds!",
+      description: "An enchanting evening featuring cocktail hour, grand dinner banquet, heartfelt toasts, performances, and dancing until late.",
+      image: "/images/ceremony-reception.png",
     },
-    {
-      no: "04",
-      name: "Cocktail Hour & Dinner",
-      date: "Wednesday, 23 December 2026",
-      time: "6:30 PM – 8:30 PM",
-      venueName: "Humble Civic Center",
-      address: "8233 Will Clayton Parkway, Humble, TX 77338",
-      description: "Continuing the wedding celebration with handcrafted cocktails, hors d'oeuvres, and an elaborate banquet dinner.",
-      dressCode: "Evening Formal Elegance",
-    },
-    {
-      no: "05",
-      name: "Grand Reception",
-      date: "Wednesday, 23 December 2026",
-      time: "9:00 PM – 1:00 AM",
-      venueName: "Humble Civic Center",
-      address: "8233 Will Clayton Parkway, Humble, TX 77338",
-      description: "A dazzling evening of heart-warming toasts, spectacular performances, and an open dance floor late into the night!",
-      dressCode: "Black Tie & Elegant Evening Wear",
-    },
-  ] as EventItem[],
+  ],
 
   bgm: {
     youtubeId: "nFmSK6eSINU",
