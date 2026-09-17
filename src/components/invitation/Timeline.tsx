@@ -145,6 +145,18 @@ export function Timeline() {
                       </div>
                     )}
 
+                    {/* Ceremony Artwork (Clean, text-free illustration) */}
+                    {evt.image && (
+                      <div className="mt-5 overflow-hidden rounded-2xl border border-gold/30 shadow-sm">
+                        <img
+                          src={evt.image}
+                          alt={evt.name}
+                          loading="lazy"
+                          className="aspect-[16/10] sm:aspect-[16/9] w-full object-cover object-top"
+                        />
+                      </div>
+                    )}
+
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground font-sans">
                       {evt.description}
                     </p>

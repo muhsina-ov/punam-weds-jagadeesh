@@ -44,14 +44,14 @@ export function DivineBlessings() {
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
               className="plate paper-grain h-full rounded-[2rem] p-6 sm:p-7 border border-gold/45 shadow-xl text-center flex flex-col items-center"
             >
-              <div className="relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-md w-48 h-48 sm:w-56 sm:h-56">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-md w-48 h-60 sm:w-56 sm:h-68 bg-cream/40">
                 <img
                   src={ganapatiImg}
                   alt="Watercolor painting of Ganapati Bapa blessing the union"
                   width={600}
                   height={600}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
 
@@ -81,14 +81,14 @@ export function DivineBlessings() {
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
               className="plate paper-grain h-full rounded-[2rem] p-6 sm:p-7 border border-gold/45 shadow-xl text-center flex flex-col items-center"
             >
-              <div className="relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-md w-48 h-48 sm:w-56 sm:h-56">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-md w-48 h-60 sm:w-56 sm:h-68 bg-cream/40">
                 <img
                   src={kabirImg}
-                  alt="Watercolor portrait of Sant Kabir Ji blessing the union"
-                  width={600}
-                  height={600}
+                  alt="Revered portrait of Sant Kabir Ji blessing the union"
+                  width={480}
+                  height={617}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
 

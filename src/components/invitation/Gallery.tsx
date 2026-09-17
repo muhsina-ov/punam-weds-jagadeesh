@@ -2,9 +2,9 @@ import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
 const couplePortrait = "/images/couple-portrait.jpg";
+const coupleWaving = "/images/couple-waving.jpg";
 const pithiImg = "/images/ceremony-pithi.png";
 const weddingImg = "/images/ceremony-wedding.png";
-const receptionImg = "/images/ceremony-reception.png";
 const coupleLanterns = "https://media.invitestory.in/ever-after-bloom/src/assets/couple-lanterns.png";
 import { Ornament, Reveal, SectionTitle } from "./Reveal";
 
@@ -31,9 +31,9 @@ const plates = [
     ratio: "aspect-[4/5]",
   },
   {
-    src: receptionImg,
-    alt: "Punam & Jagdish toasting with guests at the reception",
-    title: "Grand Reception",
+    src: coupleWaving,
+    alt: "Punam & Jagdish waving in welcome with peacocks and fountains",
+    title: "With Love & Joy",
     span: "sm:col-span-2",
     ratio: "aspect-[16/10]",
   },
