@@ -15,6 +15,7 @@ const plates = [
     title: "Punam & Jagdish",
     span: "sm:col-span-2",
     ratio: "aspect-[16/11]",
+    objectPosition: "center 40%",
   },
   {
     src: pithiImg,
@@ -22,6 +23,7 @@ const plates = [
     title: "Pithi Celebration",
     span: "",
     ratio: "aspect-[4/5]",
+    objectPosition: "center 30%",
   },
   {
     src: weddingImg,
@@ -29,13 +31,15 @@ const plates = [
     title: "The Sacred Union",
     span: "",
     ratio: "aspect-[4/5]",
+    objectPosition: "center 25%",
   },
   {
     src: coupleWaving,
     alt: "Punam & Jagdish waving in welcome with peacocks and fountains",
     title: "With Love & Joy",
     span: "sm:col-span-2",
-    ratio: "aspect-[16/10]",
+    ratio: "aspect-[16/11]",
+    objectPosition: "center 10%",
   },
 ];
 
@@ -77,6 +81,7 @@ export function Gallery() {
                     loading="lazy"
                     width={1024}
                     height={1024}
+                    style={{ objectPosition: p.objectPosition }}
                     className={`${p.ratio} h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.05]`}
                   />
                   <span
